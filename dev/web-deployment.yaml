@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fintrack-ui-deployment
+  namespace: fintrack
+  labels:
+    app: fintrack-ui
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fintrack-ui
+  template:
+    metadata:
+      labels:
+        app: fintrack-ui
+    spec:
+      containers:
+      - name: fintrack-ui
+        image: kimheang68/ui-fintrack:latest
+        ports:
+        - containerPort: 80
+      

@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fintrack-argo-application
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/ksga-11th-generation-advance-course/spring_microservcie_fin_track_infra.git
+    targetRevision: master
+    path: dev
+  destination: 
+    server: 'https://kubernetes.default.svc'
+    namespace: fintrack
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
