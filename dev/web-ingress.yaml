@@ -23,5 +23,5 @@ spec:
           service:
             name: fintrack-ui-service
             port:
-              number: 80
+              number: 1080
 
