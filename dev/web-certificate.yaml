@@ -1,12 +1,12 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: web-fintrack-cert
+  name: fintrack-ui-cert
   namespace: fintrack
 spec:
   dnsNames:
-    - ui-fintrack.kbaenak.tech
+    - web-fintrack.kbaenak.tech
   secretName: tls-cert
   issuerRef:
-    name: letsencrypt-cluster-issuer
+    name: letsencrypt-stagin
     kind: ClusterIssuer

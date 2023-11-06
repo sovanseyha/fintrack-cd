@@ -1,8 +1,7 @@
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fintrack-ui-ingress
+  name: fintrack-web
   namespace: fintrack
   annotations:
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
@@ -11,10 +10,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - ui-fintrack.kbaenak.tech
+    - web-fintrack.kbaenak.tech
     secretName: tls-cert
   rules:
-  - host: ui-fintrack.kbaenak.tech
+  - host: web-fintrack.kbaenak.tech
     http:
       paths:
       - pathType: Prefix
@@ -24,4 +23,3 @@ spec:
             name: fintrack-ui-service
             port:
               number: 1080
-
