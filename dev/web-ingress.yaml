@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - web-fintrack.kbaenak.tech
+    - fintrack.kbaenak.tech
     secretName: fintrack-ui-tls
   rules:
-    - host: web-fintrack.kbaenak.tech
+    - host: fintrack.kbaenak.tech
       http:
         paths:
           - pathType: Prefix

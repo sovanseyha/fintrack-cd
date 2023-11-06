@@ -5,7 +5,7 @@ metadata:
   namespace: fintrack
 spec:
   dnsNames:
-    - web-fintrack.kbaenak.tech
+    - fintrack.kbaenak.tech
   secretName: fintrack-ui-tls
   issuerRef:
     name: letsencrypt-prod
