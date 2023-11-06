@@ -21,4 +21,11 @@ spec:
                 name: fintrack-ui
                 port:
                   number: 1080
+          - pathType: Prefix
+            path: "/login"
+            backend:
+              service:
+                name: fintrack-ui
+                port:
+                  number: 1080
     
