@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fintrack-ui-service
+  name: fintrack-ui
   namespace: fintrack
 spec:
   type: NodePort

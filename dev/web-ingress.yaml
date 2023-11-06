@@ -1,25 +1,24 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fintrack-web
-  namespace: fintrack
+  name: fintrack-ui-ingress
   annotations:
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-    certmanager.k8s.io/issuer: "letsencrypt-cluster-issuer"
-    certmanager.k8s.io/acme-challenge-type: http01
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    kubernetes.io/ingress.class: "nginx"
 spec:
   tls:
   - hosts:
     - web-fintrack.kbaenak.tech
-    secretName: tls-cert
+    secretName: fintrack-ui-tls
   rules:
-  - host: web-fintrack.kbaenak.tech
-    http:
-      paths:
-      - pathType: Prefix
-        path: /
-        backend:
-          service:
-            name: fintrack-ui-service
-            port:
-              number: 1080
+    - host: web-fintrack.kbaenak.tech
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: fintrack-ui
+                port:
+                  number: 1080
+    
