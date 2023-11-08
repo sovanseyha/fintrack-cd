@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - fintrack.kbaenak.tech
+    - failtrack.kbaenak.tech
     secretName: app-tls
   rules:
-    - host: fintrack.kbaenak.tech
+    - host: failtrack.kbaenak.tech
       http:
         paths:
           - pathType: Prefix
