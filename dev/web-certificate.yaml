@@ -8,5 +8,5 @@ spec:
     - fintrack.kbaenak.tech
   secretName: fintrack-tls
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-prod-fintrack
     kind: ClusterIssuer
