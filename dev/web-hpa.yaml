@@ -10,6 +10,6 @@ spec:
    kind: Deployment
    name: fintrack-ui
  minReplicas: 1
- maxReplicas: 20
+ maxReplicas: 10
  targetCPUUtilizationPercentage: 50
 ...
