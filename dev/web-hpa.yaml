@@ -11,5 +11,5 @@ spec:
    name: fintrack-ui
  minReplicas: 1
  maxReplicas: 2
- targetCPUUtilizationPercentage: 50
+ targetCPUUtilizationPercentage: 20
 ...
