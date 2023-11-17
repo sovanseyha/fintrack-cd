@@ -8,9 +8,13 @@ spec:
   selector:
     app: fintrack-ui
   ports:
-      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
-    - port: 1080
+    - protocol: TCP
+      port: 8080
+      nodePort: 30010
       targetPort: 80
-      # Optional field
-      # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
-      nodePort: 31080
+      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    # - port: 8080
+    #   targetPort: 80
+    #   # Optional field
+    #   # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
+    #   nodePort: 31080
