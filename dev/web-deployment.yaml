@@ -1,28 +1,28 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: fintrack-ui
-  namespace: fintrack
-  labels:
-    app: fintrack-ui
-spec:
-  # replicas: 1
-  selector:
-    matchLabels:
-      app: fintrack-ui
-  template:
-    metadata:
-      labels:
-        app: fintrack-ui
-    spec:
-      containers:
-      - name: fintrack-ui
-        image: sovanseyha/ui-fintrack
-        ports:
-        - containerPort: 80
-        resources:
-         limits:
-           cpu: 700m
-         requests:
-           cpu: 500m
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: fintrack-ui
+#   namespace: fintrack
+#   labels:
+#     app: fintrack-ui
+# spec:
+#   # replicas: 1
+#   selector:
+#     matchLabels:
+#       app: fintrack-ui
+#   template:
+#     metadata:
+#       labels:
+#         app: fintrack-ui
+#     spec:
+#       containers:
+#       - name: fintrack-ui
+#         image: sovanseyha/ui-fintrack
+#         ports:
+#         - containerPort: 80
+#         resources:
+#          limits:
+#            cpu: 700m
+#          requests:
+#            cpu: 500m
       
