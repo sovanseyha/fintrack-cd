@@ -4,8 +4,8 @@ metadata:
   name: web-fintrack-cert
   namespace: fintrack
 spec:
-  dnsNames:
-    - fintrack.kbaenak.tech
+  # dnsNames:
+  #   - fintrack.kbaenak.tech
   secretName: app-tls
   issuerRef:
     name: letsencrypt-prod
