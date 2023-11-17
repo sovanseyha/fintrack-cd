@@ -17,12 +17,12 @@ spec:
     spec:
       containers:
       - name: fintrack-ui
-        image: sovanseyha/ui-fintrack:6
+        image: sovanseyha/ui-fintrack
         ports:
         - containerPort: 80
-        resources:
-         limits:
-           cpu: 500m
-         requests:
-           cpu: 200m
+        # resources:
+        #  limits:
+        #    cpu: 500m
+        #  requests:
+        #    cpu: 200m
       
