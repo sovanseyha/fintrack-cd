@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/ksga-11th-generation-advance-course/spring_microservcie_fin_track_infra.git
+    repoURL: https://github.com/sovanseyha/fintrack-cd.git
     targetRevision: master
     path: dev
   destination: 
