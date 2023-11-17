@@ -20,6 +20,7 @@ spec:
         image: sovanseyha/ui-fintrack:6
         ports:
         - containerPort: 80
+
         # resources:
         #  limits:
         #    cpu: 500m
